@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">imc</string>
+    <string name="resultado_imc">IMC: %1$.2f\nClassificação: %2$s</string>
+</resources>
