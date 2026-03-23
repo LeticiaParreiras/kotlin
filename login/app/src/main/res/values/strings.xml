@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AulaInterface</string>
+    <string name="hello_user">Olá, %1$s!</string>
+</resources>

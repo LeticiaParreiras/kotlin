@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+
+    tools:context=".MainActivity">
+
+     <TextView
+         android:id="@+id/LoginTextView"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Login"
+         android:layout_margin="16dp"
+         android:textColor="@color/blue"
+         android:textSize="30sp"
+         android:textStyle="bold"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent" />
+
+     <TextView
+         android:id="@+id/DesenvMobileText"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_margin="16dp"
+         android:text="Desenvolvimento Mobile II"
+         android:textSize="20sp"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/LoginTextView"
+
+         />
+
+     <ImageView
+         android:id="@+id/Image"
+         android:layout_width="100dp"
+         android:layout_height="100dp"
+         android:layout_margin="28dp"
+         android:scaleType="fitCenter"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/DesenvMobileText"
+         app:srcCompat="@drawable/ic_launcher_background">
+
+     </ImageView>
+
+     <TextView
+         android:id="@+id/UsuarioText"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_margin="28dp"
+         android:text="Usuario"
+         android:textSize="18sp"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/Image"></TextView>
+
+     <com.google.android.material.textfield.TextInputLayout
+         android:id="@+id/UsuarioEditText"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="14dp"
+         android:hint="Digite seu Usuario"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/UsuarioText">
+
+          <com.google.android.material.textfield.TextInputEditText
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:inputType="text" />
+
+     </com.google.android.material.textfield.TextInputLayout>
+
+     <TextView
+         android:id="@+id/SenhaText"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Senha"
+         android:textSize="18sp"
+          android:layout_margin="24dp"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/UsuarioEditText"></TextView>
+
+     <com.google.android.material.textfield.TextInputLayout
+         android:id="@+id/SenhaEditText"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="14dp"
+         android:hint="Digite sua Senha"
+         app:endIconMode="password_toggle"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/SenhaText">
+
+          <com.google.android.material.textfield.TextInputEditText
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:inputType="textPassword" />
+
+     </com.google.android.material.textfield.TextInputLayout>
+
+     <TextView
+         android:id="@+id/TextLoginError"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Usuario ou senha incorretas"
+         android:textColor="@color/red"
+         android:layout_margin="8dp"
+         android:visibility="invisible"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/SenhaEditText"
+
+         >
+
+     </TextView>
+
+     <Button
+         android:id="@+id/BtnEntrar"
+         android:layout_width="150dp"
+         android:layout_height="40dp"
+         android:layout_marginTop="20dp"
+         android:background="@drawable/btn_contained"
+         android:text="ENTRAR"
+         android:textColor="@color/white"
+         app:backgroundTint="@null"
+         app:layout_constraintEnd_toStartOf="@+id/BtCadastrar"
+         app:layout_constraintHorizontal_chainStyle="packed"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/TextLoginError" />
+
+     <Button
+         android:id="@+id/BtCadastrar"
+         android:layout_width="150dp"
+         android:layout_height="40dp"
+         android:background="@drawable/btn_outlined"
+         android:text="CADASTRAR"
+         android:textColor="@color/purple"
+         android:layout_marginTop="20dp"
+         android:layout_marginStart="8dp"
+         app:backgroundTint="@null"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toEndOf="@+id/BtnEntrar"
+         app:layout_constraintTop_toBottomOf="@+id/TextLoginError" />
+
+     <Button
+        android:id="@+id/BtnEsqueceuSenha"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         style="@style/Widget.MaterialComponents.Button.TextButton"
+         android:text="Esqueceu a senha?"
+         android:textColor="@color/blue"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/BtnEntrar"
+          android:layout_margin="16dp"
+         android:textAllCaps="false"
+         />
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
